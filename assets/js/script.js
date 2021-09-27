@@ -3,6 +3,10 @@ var generateBtn = document.querySelector("#generate");
 
 // criteria functions - using https://www.w3schools.com/html/html_charset.asp
 
+// number
+function getRandomNumber() {
+    return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
+}
 // upper case
 function getRandomUpperCase() {
     return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
@@ -11,7 +15,16 @@ function getRandomUpperCase() {
 function getRandomLowerCase() {
     return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
 }
-console.log(getRandomUpperCase());
+// special character
+function getRandomSpecialCharacter() {
+    const symbols = "!#$%&'()\*+,-./:;<=>?@[\]^\_`{|}~"
+    return symbols[Math.floor(Math.random() * symbols.length)];
+}
+
+console.log(getRandomNumber());
+console.log(getRandomLowerCase());
+console.log(getRandomLowerCase());
+console.log(getRandomSpecialCharacter());
 
 // LEAVE CODE BELOW ALONE 
 
