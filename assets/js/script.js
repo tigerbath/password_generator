@@ -1,37 +1,94 @@
 // Assignment code
-var generateBtn = document.querySelector("#generate");
+const generateBtn = document.querySelector("#generate");
 
-// criteria functions - using https://www.w3schools.com/html/html_charset.asp
+// G L O B A L  A R R A Y S 
 
-// number
-function getRandomNumber() {
-    return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
-}
-// upper case
-function getRandomUpperCase() {
-    return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
-}
-// lower case
-function getRandomLowerCase() {
-    return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
-}
-// special character
-function getRandomSpecialCharacter() {
-    const symbols = "!#$%&'()\*+,-./:;<=>?@[\]^\_`{|}~"
-    return symbols[Math.floor(Math.random() * symbols.length)];
+// arrays containing characters, symbols & numbers used in password generation
+
+// symbols
+const symbolCharacter = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
+// numbers
+const numberCharacter = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+// lowercase
+const lowerCaseCharacter = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+// uppercase
+const upperCaseCharacter = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+
+// V A R I A B L E S 
+
+// password option variables
+
+const selectSymbolCharacter;
+const selectNumberCharacter;
+const selectLowerCaseCharacter;
+const selectUpperCaseCharacter;
+
+
+// F U N C T I O N 
+
+// create password function 
+function createPassword() {
+    // request input
+
+    // validate input (between 8-128)
+
+    // if invalid
+
+    // if valid continues to criteria request
+        // confirm symbol
+
+        // confirm number
+
+        // confirm lower case
+
+        // confirm upper case
+
+    // if four negative values inputted
+    
+    // if values inputted, stored here
+    const passwordCriteria = []
+    // if symbol selected
+
+    // if number selected
+
+    // if lower case selected
+
+    // if upper case selected
+
+    // password string composed of random characters from chosen criterias in passwordCriteria array
+
 }
 
-console.log(getRandomNumber());
-console.log(getRandomLowerCase());
-console.log(getRandomLowerCase());
-console.log(getRandomSpecialCharacter());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // LEAVE CODE BELOW ALONE 
 
 // Write password to the #password input
 function writePassword() {
-    var password = generatePassword();
-    var passwordText = document.querySelector("#password");
+    const password = generatePassword();
+    const passwordText = document.querySelector("#password");
 
     passwordText.value = password;
 
