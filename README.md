@@ -1,67 +1,45 @@
 # password_generator
+
 A multi-functional password generator application made using JavaScript that allows the user to create complex passwords.
 
-Folder Structure
+# Project brief & notes
 
-- index.html
-- assets
-  - images
-    - screenshot.png
-  - css
-    - styles.css
-  - js
-    - script.js
-- README.md
+I have been tasked to create a random password generator curated to a users specific criteria, using prompts to determine the users selections.
 
-(change your src attr on HTML to get the script.js)
+## Link to Github pages
 
-How do you select the criteria?
+<a href= "https://tigerbath.github.io/password_generator">Link to my git pages</a>
 
-- prompt (for text inputs)
-- confirm (for Yes/No)
-- alert (display info messages)
+## What i've done
 
-What is the criteria?
+generated password criteria verification with a selection of prompts. First the user must choose the length of password between a set minimum and limit. If the user doesn't select a valid length, the user is prompted to try again. If the user selects a valid length, the user is then prompted to select from the following criteria to make up their password.
 
-- Choose password length? (prompt)
-  - User can choose length >= 8 and less than 128 (what type of data is stored here)
-    - check if you can convert the text from user to integer
-    - validate if in range else display an alert message and break
-- Do you want to include lowercase characters? (confirm) What type of data will this store
-  - User can select Yes or No (true/false)
-    - no validation here
-- Do you want to include uppercase characters? (confirm)
-  - User can select Yes or No (true/false)
-    - no validation here
-- Do you want to include numeric characters? (confirm)
-  - User can select Yes or No (true/false)
-    - no validation here
-- Do you want to include special characters? (confirm)
-  - User can select Yes or No (true/false)
-    - no validation here
-- Before proceeding check if all at least one confirm is YES
-  - validate if all false then display alert message and break
+- Does the user want symbol characters?
+- Does the user want numbers?
+- Does the user want uppercase characters?
+- Does the user want lowercase characters?
 
-DO NOT DO THIS:
+If the user doesn't select an option, an invalid selection prompt is shown.
 
-- DO NOT change HTML layout
-- DO NOT change CSS
+Once the user has selected a valid length with valid criteria, a password is generated in the box.
 
-User Flow
+## Techniques used
 
-- Click on generate password button
-- Presented with criteria
-- Fill in the criteria
-- Password should appear on the page
+- arrays
+- prompts
+- functions
+- conditional statements
 
-Steps
+## Technologies used
 
-- Declare a function `generatePassword`
-- Declare const for lowercase
-  abcdefghijklmnopqrstuvwxyz
-- Declare const for uppercase
-  ABCDEFGHIJKLMNOPQRSTUVWXYZ
-- Declare const for numeric
-  1234567890
-- Declare const for specialCharacters
-  " !"#$%&'()\*+,-./:;<=>?@[\]^\_`{|}~"
+- HTML
+- CSS
+- JavaScript
+
+## Screenshots
+
+<img src="assets\images\Password Generator Plan 1.png" alt="screenshot of original plan">
+- Screenshot of original plan
+
+<img src="assets\images\Password Generat.png" alt="screenshot of functioning application">
+- Screenshot of functioning application

@@ -139,35 +139,37 @@ function createPassword() {
   }
 
   // array with selected choices
-  const chosen = [];
+  const selectedChoices = [];
 
   // if valid continues to criteria request
   // confirm symbol
   if (selectSymbolCharacters) {
-    chosen.push(symbolCharacter);
+    selectedChoices.push(symbolCharacter);
   }
   // confirm number
   if (selectNumberCharacters) {
-    chosen.push(numberCharacter);
+    selectedChoices.push(numberCharacter);
   }
   // confirm lower case
   if (selectLowerCaseCharacters) {
-    chosen.push(lowerCaseCharacter);
+    selectedChoices.push(lowerCaseCharacter);
   }
   // confirm upper case
   if (selectUpperCaseCharacters) {
-    chosen.push(upperCaseCharacter);
+    selectedChoices.push(upperCaseCharacter);
   }
 
   // array for generated password
   const password = [];
 
   for (let i = 0; i < passwordLength; i++) {
-    // get random index from chosen array
-    const randomChosenArrayIndex = Math.floor(Math.random() * chosen.length);
+    // get random index from selectedChoices array
+    const randomChosenArrayIndex = Math.floor(
+      Math.random() * selectedChoices.length
+    );
 
     // get random character set
-    const randomCharacterSet = chosen[randomChosenArrayIndex];
+    const randomCharacterSet = selectedChoices[randomChosenArrayIndex];
 
     // get random character index
     const randomCharacterIndex = Math.floor(
